@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
     @RequestMapping(path = "/" , method = RequestMethod.GET)
-
     public String index(
             @RequestParam(defaultValue = "USA") String country
             )
@@ -16,4 +15,12 @@ public class HomeController {
         return "Hello " + country ;
     }
 
+    @RequestMapping(path = "/desi" , method = RequestMethod.GET)
+    public String desiPage(
+            @RequestParam(defaultValue = "Desi" +
+                    "") String differentName
+    )
+    {
+        return "Hello " + differentName  ;
+    }
 }
