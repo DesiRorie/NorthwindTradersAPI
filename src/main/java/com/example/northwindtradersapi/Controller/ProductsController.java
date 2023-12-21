@@ -35,6 +35,12 @@ public class ProductsController {
     public Product insertProduct(@RequestBody Product product) {
         return jdbcProductDao.insertProduct(product);
     }
+    @RequestMapping(path="/products/delete/{id}",method=RequestMethod.DELETE)
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    public void deleteProduct(@PathVariable int id)
+    {
+        jdbcProductDao.deleteProduct(id);
+    }
 }
 
 
