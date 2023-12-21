@@ -1,9 +1,7 @@
 package com.example.northwindtradersapi.Controller;
 
-import com.example.northwindtradersapi.JdbcProductDao;
+import com.example.northwindtradersapi.DAO.JdbcProductDao;
 import com.example.northwindtradersapi.Models.Product;
-import com.example.northwindtradersapi.Models.Store;
-import com.example.northwindtradersapi.ProductDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

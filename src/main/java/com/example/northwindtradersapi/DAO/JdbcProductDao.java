@@ -1,4 +1,4 @@
-package com.example.northwindtradersapi;
+package com.example.northwindtradersapi.DAO;
 
 import com.example.northwindtradersapi.Models.Product;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.List;
+
 @Component
-public class JdbcProductDao implements ProductDao{
+public class JdbcProductDao implements ProductDao {
     private  final DataSource dataSource;
 
     @Autowired
@@ -40,7 +40,7 @@ public class JdbcProductDao implements ProductDao{
 
     @Override
     public Product getById(int id) {
-Product returnedProduct = null;
+        Product returnedProduct = null;
         String sql = "SELECT * FROM Products WHERE ProductID = ?";
         try(Connection connection = dataSource.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {

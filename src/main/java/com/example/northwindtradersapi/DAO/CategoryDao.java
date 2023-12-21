@@ -1,4 +1,4 @@
-package com.example.northwindtradersapi;
+package com.example.northwindtradersapi.DAO;
 
 import com.example.northwindtradersapi.Models.Category;
 
